@@ -91,7 +91,12 @@ export default function HeroSection({ settings = {} }) {
           Blessing <span className="font-bold text-[#C9973A]">Kost</span>
         </h1>
 
-        <p className="text-white/80 text-lg mb-1">📍 {address}</p>
+        <a href="https://maps.google.com/?q=Jl.+Bunga+Kenanga+No.+9B,+Medan+Selayang"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-white/80 text-lg mb-1 transition-all duration-200 hover:text-[#C9973A] hover:underline hover:underline-offset-4 cursor-pointer"
+      >
+        📍 {address}</a>
         <p className="text-white/60 text-sm mb-3">Dekat Universitas Sumatera Utara (USU)</p>
 
         {/* Caption slide */}
@@ -100,25 +105,31 @@ export default function HeroSection({ settings = {} }) {
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mt-2">
           
-          <a // <--- Tag <a WhatsApp yang hilang dikembalikan di sini
+          <a // <--- Tag <a WhatsApp berhasil dikembalikan
             href={waLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition shadow-lg"
+            className="group flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-300 w-full sm:w-auto shadow-xl hover:shadow-green-500/30 hover:scale-105"
+            style={{background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)', color: 'white', minWidth: '210px'}}
           >
-            <Phone size={20} />
+            <div className="bg-white/20 rounded-lg p-1">
+              <Phone size={16} />
+            </div>
             Hubungi via WhatsApp
           </a>
           
-          <a // <--- Tag <a Instagram yang hilang dikembalikan di sini
+          <a // <--- Tag <a Instagram berhasil dikembalikan
             href={igUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/40 px-8 py-4 rounded-xl font-semibold text-lg transition backdrop-blur-sm"
+            className="group flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-300 w-full sm:w-auto hover:scale-105"
+            style={{background: 'rgba(255,255,255,0.12)', backdropFilter: 'blur(12px)', border: '1.5px solid rgba(255,255,255,0.25)', color: 'white', minWidth: '210px'}}
           >
-            <img src={IgLogo} alt="Instagram" className="w-5 h-5 rounded-sm object-cover" />
+            <div className="bg-white/20 rounded-lg p-1 flex items-center">
+              <img src={IgLogo} alt="Instagram" className="w-4 h-4 rounded-sm object-cover" />
+            </div>
             Lihat Instagram
           </a>
         </div>

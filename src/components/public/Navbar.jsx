@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { Home } from 'lucide-react'
 
 const navLinks = [
   { label: 'Kamar', href: '#tipe-kamar' },
@@ -16,9 +17,17 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1B2A4A] shadow-lg">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="text-white font-bold text-xl tracking-wide" style={{fontFamily:'Plus Jakarta Sans, sans-serif'}}>
-          🏠 Blessing Kost
-        </a>
+        <a href="/" className="flex items-center gap-2 group transition">
+          {/* Ikon Rumah Minimalis berwarna Emas */}
+          <Home size={22} className="text-[#C9973A] group-hover:scale-105 transition-transform" />
+  
+          <span 
+            className="text-white text-xl tracking-wide font-light" 
+            style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
+          >
+            Blessing <span className="font-bold text-[#C9973A]">Kost</span>
+          </span>
+      </a>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-6">

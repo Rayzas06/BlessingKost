@@ -10,14 +10,19 @@ import { useTestimonials } from '../hooks/useTestimonials'
 import { useSettings } from '../hooks/useSettings'
 
 export default function HomePage() {
+  const { data: rooms } = useRooms()
+  const { data: facilities } = useFacilities()
+  const { data: testimonials } = useTestimonials()
+  const { data: settings } = useSettings()
+
   return (
     <div>
       <Navbar />
-      <HeroSection />
-      <RoomSection />
-      <FacilitySection />
-      <TestimonialSection />
-      <ContactSection />
+      <HeroSection settings={settings} />
+      <RoomSection rooms={rooms} />
+      <FacilitySection facilities={facilities} />
+      <TestimonialSection testimonials={testimonials} />
+      <ContactSection settings={settings} />
     </div>
   )
 }

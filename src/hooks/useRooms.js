@@ -4,6 +4,8 @@ import { supabase } from '../lib/supabase'
 export function useRooms() {
   return useQuery({
     queryKey: ['rooms'],
+    staleTime: 0,
+    refetchOnWindowFocus: true,
     queryFn: async () => {
       const { data, error } = await supabase
         .from('room_types')

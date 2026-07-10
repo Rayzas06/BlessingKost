@@ -1,3 +1,4 @@
-﻿export default function FasilitasPage() {
-  return <div className="p-8">Kelola Fasilitas (coming soon)</div>
+﻿import AdminLayout from "../../components/admin/AdminLayout"
+export default function FasilitasPage() {
+  return <AdminLayout><div className="bg-white rounded-2xl p-8 shadow-sm"><h2 className="text-xl font-bold text-[#1B2A4A]">Kelola Fasilitas — Coming Soon</h2></div></AdminLayout>
 }

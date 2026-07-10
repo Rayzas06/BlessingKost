@@ -1,4 +1,5 @@
 import RoomCard from './RoomCard'
+import { SkeletonCard } from '../ui/Skeleton'
 
 const STATIC_ROOMS = [
   { id: 1, name: 'Type A', description: 'Kamar Kosong / Bersih', price_monthly: 750000, price_3months: 2100000, is_popular: false, status: 'kosong' },
